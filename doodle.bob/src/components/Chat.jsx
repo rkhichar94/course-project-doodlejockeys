@@ -29,17 +29,19 @@ class Chat extends Component {
     }
 
     sendMessage(event) {
-        let copyMessages = this.state.messages;
-        copyMessages.push({
-            userid: 1,
-            messageid: this.state.messageidLast + 1,
-            messageText: this.state.newMessage
-        });
-        this.setState({
-            messages: copyMessages,
-            newMessage: "",
-            messageidLast: this.state.messageidLast + 1
-        });
+        if (this.state.newMessage.length > 0) {
+            let copyMessages = this.state.messages;
+            copyMessages.push({
+                userid: 1,
+                messageid: this.state.messageidLast + 1,
+                messageText: this.state.newMessage
+            });
+            this.setState({
+                messages: copyMessages,
+                newMessage: "",
+                messageidLast: this.state.messageidLast + 1
+            });
+        }
     }
 
     render(props) {
@@ -47,6 +49,8 @@ class Chat extends Component {
             <div className="App">
                 <div className="conversation">
                     <header className="chatHeader">Chat and Guess!</header>
+                    <p>Round {this.props.round}</p>
+                    <hr></hr>
                     <div className="chatHistory">
                         {this.state.messages.map((message) => (
                             <div>
