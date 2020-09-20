@@ -37,11 +37,12 @@ class Chat extends Component {
         });
         this.setState({
             messages: copyMessages,
-            newMessage: ""
+            newMessage: "",
+            messageidLast: this.state.messageidLast + 1
         });
     }
 
-    render() {
+    render(props) {
         return (
             <div className="App">
                 <div className="conversation">
@@ -50,15 +51,21 @@ class Chat extends Component {
                         {this.state.messages.map((message) => (
                             <div>
                                 {message.userid === 1 && (
-                                    <div className="messageBoxSender">
-                                        <h5 className="messageTextSender">{message.messageText}</h5>
+                                    <div>
+                                        <p className="userNameChatSender">{this.props.userList[message.userid]["username"]}</p>
+                                        <div className="messageBoxSender">
+                                            <h5 className="messageTextSender">{message.messageText}</h5>
+                                        </div>
                                     </div>
                                 )}
                                 {message.userid !== 1 && (
-                                    <div className="messageBoxReceiver">
-                                        <h5 className="messageTextReceiver">
-                                            {message.messageText}
-                                        </h5>
+                                    <div>
+                                        <p className="userNameChatReceiver">{this.props.userList[message.userid]["username"]}</p>
+                                        <div className="messageBoxReceiver">
+                                            <h5 className="messageTextReceiver">
+                                                {message.messageText}
+                                            </h5>
+                                        </div>
                                     </div>
                                 )}
                             </div>

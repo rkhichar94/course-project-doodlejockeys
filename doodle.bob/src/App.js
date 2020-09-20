@@ -4,9 +4,20 @@ import './App.css';
 import Chat from "./components/Chat"
 
 function App() {
+  const gameInfo = {
+    gameid: 0,
+    users: {
+      1: { userid: 1, username: "iguanaoverlord", role: "artist" },
+      2: { userid: 2, username: "chickennuggets", role: "guesser" },
+      3: { userid: 3, username: "walrusparade", role: "guesser" }
+    },
+  };
   return (
     <div className="App">
-      <Chat />
+      <Chat
+        gameid={gameInfo.gameid}
+        userList={gameInfo.users}
+      />
     </div>
   );
 }

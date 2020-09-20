@@ -92,3 +92,18 @@
     padding: 7px;
   }
   
+
+.userNameChatReceiver {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: -20px;
+}
+
+
+.userNameChatSender {
+    text-align: right;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: -20px;
+}
