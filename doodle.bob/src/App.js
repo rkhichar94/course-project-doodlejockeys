@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Chat from "./components/Chat"
 
@@ -8,9 +7,9 @@ function App() {
     gameid: 0,
     roundNumber: 1,
     users: {
-      1: { userid: 1, username: "iguanaoverlord", role: "artist" },
-      2: { userid: 2, username: "chickennuggets", role: "guesser" },
-      3: { userid: 3, username: "walrusparade", role: "guesser" }
+      1: { userid: 1, username: "iguanaoverlord", profilePic: "duck", role: "artist" },
+      2: { userid: 2, username: "chickennuggets", profilePic: "chicken", role: "guesser" },
+      3: { userid: 3, username: "walrusparade", profilePic: "rhino", role: "guesser" }
     },
   };
   return (

@@ -26,6 +26,7 @@
     background-color: rgb(151, 0, 50);
     border-radius: 10px;
     margin-left: 30%;
+    margin-right: 15px;
     height: font-family;
     /* width: 50%; */
   }
@@ -41,6 +42,7 @@
     background-color: lightgray;
     border-radius: 10px;
     margin-right: 30%;
+    margin-left: 15px;
     height: font-family;
     /* width: 50%; */
   }
@@ -110,4 +112,23 @@
     font-size: 14px;
     margin-right: 10px;
     margin-bottom: -20px;
+}
+
+
+.myProPic {
+    width: 50px;
+    border-radius: 50%;
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.otherProPic {
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
