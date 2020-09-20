@@ -16,6 +16,10 @@
   .chatHistory {
     height: 400px;
     overflow: scroll;
+    position : relative; 
+    bottom:0;
+    display: flex;
+    flex-direction: column-reverse;
   }
   
   .messageBoxSender {

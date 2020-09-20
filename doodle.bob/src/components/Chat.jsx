@@ -15,11 +15,21 @@ class Chat extends Component {
                 { userid: 3, messageid: 7, messageText: "what??? how is that wrong?" },
                 { userid: 2, messageid: 8, messageText: "lol oops" }
             ],
+            orderedMessages: [],
             newMessage: "",
             messageidLast: 8
         };
         this.handleNewMessage = this.handleNewMessage.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
+    }
+
+    componentDidMount() {
+        let temp = this.state.messages.sort()
+        // if (this.state.messageidLast % 2 != 0) {
+        this.setState({
+            orderedMessages: temp.reverse()
+        })
+        // }
     }
 
     handleNewMessage(event) {
@@ -30,6 +40,9 @@ class Chat extends Component {
 
     sendMessage(event) {
         if (this.state.newMessage.length > 0) {
+            this.setState({
+                orderedMessages: this.state.orderedMessages.reverse()
+            })
             let copyMessages = this.state.messages;
             copyMessages.push({
                 userid: 1,
@@ -42,6 +55,8 @@ class Chat extends Component {
                 messageidLast: this.state.messageidLast + 1
             });
         }
+        console.log(this.state.messageidLast)
+        this.componentDidMount()
     }
 
     render(props) {
@@ -52,7 +67,7 @@ class Chat extends Component {
                     <p>Round {this.props.round}</p>
                     <hr></hr>
                     <div className="chatHistory">
-                        {this.state.messages.map((message) => (
+                        {this.state.orderedMessages.map((message) => (
                             <div>
                                 {message.userid === 1 && (
                                     <div>
