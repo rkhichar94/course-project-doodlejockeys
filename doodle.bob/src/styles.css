@@ -1,0 +1,94 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .conversation {
+    background-color: white;
+    width: 30%;
+    /* height: 600px; */
+    border: solid 3px;
+    border-color: lightgray;
+    border-radius: 5%;
+    margin-top: 50px;
+  }
+  
+  .chatHistory {
+    height: 400px;
+    overflow: scroll;
+  }
+  
+  .messageBoxSender {
+    background-color: rgb(151, 0, 50);
+    border-radius: 10px;
+    margin-left: 30%;
+    height: font-family;
+    /* width: 50%; */
+  }
+  
+  .messageTextSender {
+    text-align: left;
+    padding-right: 10px;
+    color: white;
+    padding: 10px;
+  }
+  
+  .messageBoxReceiver {
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-right: 30%;
+    height: font-family;
+    /* width: 50%; */
+  }
+  
+  .messageTextReceiver {
+    text-align: left;
+    padding-right: 10px;
+    color: white;
+    padding: 10px;
+  }
+  
+  .messageArea {
+    width: 77%;
+    margin-bottom: -10px;
+    margin-left: -3px;
+    float: left;
+    height: 45px;
+  }
+  
+  .sendMessage {
+    width: 22%;
+    float: right;
+    height: 50px;
+    margin-bottom: -10px;
+    border-radius: 10px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    box-shadow: 100px 100px 100px 2000px rgba (0, 0, 0, 0.3);
+    cursor: pointer;
+    text-align: 30%;
+    font-size: 20px;
+  }
+  
+  .sendMessage:hover {
+    background-color: white;
+    color: black;
+    border: solid 3px;
+    border-color: black;
+  }
+  
+  .sending {
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .chatHeader {
+    background-color: rgb(41, 41, 41);
+    border-radius: 20px;
+    height: 30px;
+    margin-top: -15px;
+    color: white;
+    font-size: 20px;
+    padding: 7px;
+  }
+  
