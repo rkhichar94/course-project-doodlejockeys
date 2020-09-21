@@ -59,7 +59,7 @@
     margin-bottom: -10px;
     margin-left: -3px;
     float: left;
-    height: 45px;
+    resize: none;
   }
   
   .sendMessage {
