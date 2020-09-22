@@ -1,11 +1,20 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
 .App {
     font-family: sans-serif;
-    text-align: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
   }
   
   .conversation {
     background-color: white;
-    width: 30%;
+    /* width: 30%; */
     /* height: 600px; */
     border: solid 3px;
     border-color: lightgray;

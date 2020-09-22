@@ -70,7 +70,7 @@ class Chat extends Component {
 
     render(props) {
         return (
-            <div className="App">
+            <div className="chat">
                 <div className="conversation">
                     <header className="chatHeader">Chat and Guess!</header>
                     <p>Round {this.props.round}</p>
