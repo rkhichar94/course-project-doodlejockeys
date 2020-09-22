@@ -9,17 +9,20 @@ body {
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+    align-items: center;
+    /* display: inline; */
+    width: 100%;
   }
   
   .conversation {
     background-color: white;
-    /* width: 30%; */
+    width: 400px;
     /* height: 600px; */
     border: solid 3px;
     border-color: lightgray;
     border-radius: 5%;
     margin-top: 50px;
+    float: right;
   }
   
   .chatHistory {
@@ -140,4 +143,10 @@ body {
     margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
+}
+
+#canvas {
+    width: 50%;
+    margin-left: 0px;
+    float: left;
 }
