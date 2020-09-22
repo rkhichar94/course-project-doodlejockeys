@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Chat from "./components/Chat"
+import Canvas from "./components/Canvas"
 
 function App() {
   const gameInfo = {
@@ -14,6 +15,9 @@ function App() {
   };
   return (
     <div className="App">
+
+      <Canvas />
+	
       <Chat
         gameid={gameInfo.gameid}
         userList={gameInfo.users}
