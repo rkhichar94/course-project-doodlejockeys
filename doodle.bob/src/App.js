@@ -1,3 +1,28 @@
+
+import React, { Component } from "react";
+import "./App.css";
+import HomePage from "./components/Homepage";
+//Import all needed Component for this tutorial
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect
+} from "react-router-dom";
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Route exact path="/" component={HomePage} />
+      </Router>
+    );
+  }
+}
+export default App;
+
+/*
 import React from 'react';
 import './App.css';
 import Chat from "./components/Chat"
@@ -32,4 +57,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; */
