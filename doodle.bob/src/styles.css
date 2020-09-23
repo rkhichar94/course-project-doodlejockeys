@@ -150,3 +150,10 @@ body {
     margin-left: 0px;
     float: left;
 }
+.toolbar {
+  width: 40%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color:lightgray;
+  font-size: 20px;
+}

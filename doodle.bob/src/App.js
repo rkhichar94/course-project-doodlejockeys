@@ -3,6 +3,7 @@ import './App.css';
 import Chat from "./components/Chat"
 import Canvas from "./components/Canvas"
 import Clock from "./components/Clock"
+import Toolbar from './components/Toolbar';
 
 function App() {
   const gameInfo = {
@@ -16,7 +17,7 @@ function App() {
   };
   return (
     <div className="App">
-	<Clock />
+      <Clock />
       <Canvas />
 
       <Chat
@@ -24,7 +25,10 @@ function App() {
         userList={gameInfo.users}
         round={gameInfo.roundNumber}
       />
+      <Toolbar />
     </div>
+
+
   );
 }
 
