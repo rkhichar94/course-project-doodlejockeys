@@ -6,12 +6,7 @@ class Clock extends Component {
     constructor(props) {
         super(props);
         this.state = {
-		timer : 100000,
-		countdown : new Date().gettime() + timer,
-		now : new Date().getTime(),
-		timebetween : countdown - now,
-		minutes : Math.floor((timebetween % (1000*60 * 60))/(1000 * 60)),
-		seconds : Math.floor((timebetween % (1000*60))/1000)
+            seconds: 10
         };
     }
     
@@ -22,25 +17,23 @@ class Clock extends Component {
     }
 
     componentWillUnmount() {
-        clearInterval(this.timerID);
+        clearInterval(this.timerId);
     }
 
     tick() {
-        this.setState({
-          	
-		countdown : new Date().gettime() + timer,
-		now : new Date().getTime(),
-		timebetween : countdown - now,
-		minutes : Math.floor((timebetween % (1000*60 * 60))/(1000 * 60)),
-		seconds : Math.floor((timebetween % (1000*60))/1000)
+        if(this.state.seconds <= 1) {
+            clearInterval(this.timerId);
+        }
 
+        this.setState({
+            seconds: this.state.seconds - 1
         });
     }
 
     render(props) {
         return (
         <div id="clock">
-            <p>{this.state.date.toLocaleTimeString()}</p>
+            <p>{this.state.seconds + "s"}</p>
         </div>
     );
     }
