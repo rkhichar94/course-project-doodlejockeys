@@ -1,0 +1,149 @@
+/*START OF CSS FOR HOME PAGE */
+.background{
+    color: #ffd602;
+  }
+  .Welcome{
+    font-size: 45px;
+  }
+  .dblogo{
+      height: 250px;
+      width: 250px;
+  }
+  .dblogo,.Welcome{
+    padding-left: 50px;
+  }
+
+  /* --------------------------- */
+  .game-middle {
+    margin: -75px;
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      rgba(236, 164, 0, 1) 0%,
+      rgba(218, 44, 56, 1) 100%
+    );
+    border: 1px solid #000000;
+  }
+  
+  .game-card {
+    
+    width: 30%;
+    margin-top: -10vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 0 10px 10px 10px;
+    border: black 1px solid;
+    position: absolute;
+    right:0;
+  }
+  
+  .newgame-tab {
+    width: 30%;
+    height: 50px;
+    border: #000000 1px solid;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    background-color: gray;
+    position: absolute;
+    top: -50px;
+    left: -5px;
+    display: block;
+    padding: 0px 1px;
+  }
+  
+  .newgame-button {
+    width: 100%;
+    padding: 0;
+    background-color: gray;
+    border: none;
+    color: black;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin: 5px auto;
+    border-bottom: none;
+  }
+  
+  .joingame-tab {
+    width: 30%;
+    height: 50px;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    border: #000000 1px solid;
+    background-color:crimson;
+    position: absolute;
+    top: -50px;
+    margin-left: 29%;
+    display: block;
+    padding: 0px 10px;
+  }
+  .joingame-tab-highlight {
+    width: 30%;
+    height: 50px;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    border: #000000 1px solid;
+    background-color: crimson;
+    position: absolute;
+    top: -50px;
+    margin-left: 29%;
+    display: block;
+    padding: 0px 10px;
+  }
+  .join-button {
+    width: 100%;
+    padding: 0;
+    background-color:crimson;
+    border: none;
+    color: black;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin: 5px auto;
+    border-bottom: none;
+  }
+  .submit-button {
+    background-color: #3399cc;
+    border: none;
+    color: white;
+    padding: 5px 150px;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 25px auto;
+  }
+  
+  .submit-button:hover {
+    background-color: #8abdd6;
+    color: #000000;
+  }
+
+  .footer{
+    height: 84px;
+
+  }
+  
+  .table {
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+  }
+  
+  .horizontal-list {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+    }
+  .horizontal-list {
+      display: inline;
+    }
+  /*END OF CSS FOR THE HOMEPAGE */
