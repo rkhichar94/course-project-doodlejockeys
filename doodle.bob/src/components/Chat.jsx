@@ -62,9 +62,10 @@ class Chat extends Component {
                 newMessage: "",
                 messageidLast: this.state.messageidLast + 1
             });
+            this.componentDidMount()
         }
         console.log(this.state.messageidLast)
-        this.componentDidMount()
+
     }
 
     render(props) {
@@ -110,6 +111,7 @@ class Chat extends Component {
                             value={this.state.newMessage}
                             className="messageArea"
                             placeholder="Send A Message..."
+                            rows="3" cols="1"
                         ></textarea>
                         <button
                             onClick={(event) => this.sendMessage(event)}
