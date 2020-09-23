@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Chat from "./components/Chat"
+import Toolbar from './components/Toolbar';
 
 function App() {
   const gameInfo = {
@@ -19,7 +20,10 @@ function App() {
         userList={gameInfo.users}
         round={gameInfo.roundNumber}
       />
+      <Toolbar/>
     </div>
+  
+
   );
 }
 
