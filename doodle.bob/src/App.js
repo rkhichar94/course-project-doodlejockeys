@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Chat from "./components/Chat"
 import Canvas from "./components/Canvas"
+import Clock from "./components/Clock"
 
 function App() {
   const gameInfo = {
@@ -15,7 +16,7 @@ function App() {
   };
   return (
     <div className="App">
-
+	<Clock />
       <Canvas />
 
       <Chat
