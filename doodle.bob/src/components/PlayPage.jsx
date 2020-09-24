@@ -9,9 +9,9 @@ function PlayPage() {
         gameid: 0,
         roundNumber: 1,
         users: {
-            1: { userid: 1, username: "iguanaoverlord", profilePic: "duck", role: "artist" },
-            2: { userid: 2, username: "chickennuggets", profilePic: "chicken", role: "guesser" },
-            3: { userid: 3, username: "walrusparade", profilePic: "rhino", role: "guesser" }
+            1: { userid: 1, username: "iguanaoverlord", profilePic: "duck", role: "artist", score: 0 },
+            2: { userid: 2, username: "chickennuggets", profilePic: "chicken", role: "guesser", score: 0 },
+            3: { userid: 3, username: "walrusparade", profilePic: "rhino", role: "guesser", score: 0 }
         },
     };
     return (
