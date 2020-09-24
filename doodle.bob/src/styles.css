@@ -34,7 +34,7 @@ body {
     flex-direction: column-reverse;
   }
   
-  .messageBoxSender {
+  .messageBoxSenderWrong {
     background-color: rgb(151, 0, 50);
     border-radius: 10px;
     margin-left: 30%;
@@ -43,6 +43,16 @@ body {
     /* width: 50%; */
   }
   
+
+  .messageBoxSenderRight {
+    background-color: rgb(0, 151, 8);
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-right: 15px;
+    height: font-family;
+    /* width: 50%; */
+  }
+
   .messageTextSender {
     text-align: left;
     padding-right: 10px;
@@ -50,8 +60,17 @@ body {
     padding: 10px;
   }
   
-  .messageBoxReceiver {
+  .messageBoxReceiverWrong {
     background-color: lightgray;
+    border-radius: 10px;
+    margin-right: 30%;
+    margin-left: 15px;
+    height: font-family;
+    /* width: 50%; */
+  }
+
+  .messageBoxReceiverRight {
+    background-color: rgb(0, 151, 8);
     border-radius: 10px;
     margin-right: 30%;
     margin-left: 15px;
@@ -108,6 +127,7 @@ body {
     color: white;
     font-size: 20px;
     padding: 7px;
+    text-align: center;
   }
   
 
@@ -156,5 +176,10 @@ body {
   margin: 0 auto;
   background-color:lightgray;
   font-size: 20px;
+}
+
+.roundName {
+    text-align: center;
+    
 }
 
