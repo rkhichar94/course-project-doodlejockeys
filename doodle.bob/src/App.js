@@ -2,6 +2,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import HomePage from "./components/Homepage";
+import PlayPage from "./components/PlayPage";
+
 //Import all needed Component for this tutorial
 import {
   BrowserRouter as Router,
@@ -16,6 +18,7 @@ class App extends Component {
     return (
       <Router>
         <Route exact path="/" component={HomePage} />
+        <Route path="/PlayPage" component={PlayPage} />
       </Router>
     );
   }

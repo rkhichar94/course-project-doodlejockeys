@@ -91,6 +91,9 @@ class Chat extends Component {
                                 )}
                                 {message.userid !== 1 && (
                                     <div>
+                                        {console.log(message.userid)}
+                                        {console.log(this.props.userList[message.userid]["profilePic"])}
+                                        {console.log(this.state.profilePictures[this.props.userList[message.userid]["profilePic"]])}
                                         <img src={this.state.profilePictures[this.props.userList[message.userid]["profilePic"]]} alt="others profile pic" className="otherProPic" />
                                         <div>
                                             <p className="userNameChatReceiver">{this.props.userList[message.userid]["username"]}</p>

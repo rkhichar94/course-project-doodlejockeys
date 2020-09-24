@@ -1,0 +1,16 @@
+.continueToPlay {
+  width: 200px;
+  height: 50px;
+  background-color: darkgray;
+  color: white;
+  border-radius: 10px;
+  margin: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.continueToPlay:hover {
+  background-color: white;
+  color: darkgrey;
+}
