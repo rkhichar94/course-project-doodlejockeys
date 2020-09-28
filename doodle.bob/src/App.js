@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import HomePage from "./components/Homepage";
+import Avatar from "./components/AvatarCreation";
 //Import all needed Component for this tutorial
 import {
   BrowserRouter as Router,

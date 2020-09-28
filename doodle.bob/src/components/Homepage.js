@@ -18,58 +18,73 @@ var rootStyle = {
 
 //const HomePage = () => {
 class HomePage extends Component {
-    render(){
+  render(){
         return (
         <div>
+          <div className="game-middle">
           <div style={rootStyle}>
           <div class="logo">
               <img src={require("../images/logo.png")}
               alt="dblogo"
               class="dblogo" />
           </div>
+          
+  
       <div className="Welcome">
-    <div>
-      <p>Welcome to</p>
-      <b>Doodle.bob</b>
+      <p className="first">Welcome to</p>
+      <p className="second"><b>Doodle.bob</b></p>
     </div>
-          <div className="game-card">
+    {/* CARD */}
+    <div className="game-card">
+          <div className="game-middle">
             <div>
-              {/* New Game Button */}
+              <div className="content">
+            <h2 className="h2-gamecode"> Game Code:</h2>
+            <input className="gamecode"
+                type="text"
+                name="gamecode"
+                placeholder="Enter a game code here"
+              ></input>
+            <p className="h2-gamecode">Username: </p>
+            <input className="gamecode"
+                type="text"
+                name="gamecode"
+                placeholder="Enter cool name here"
+              ></input>
+              <p className="card-footer"> Configure your gameboard and avatar on the next page!</p>
+              <button className="continue"> <span> Continue </span></button>
+              </div>
+              {/* Sign Up Button */}
               <div className="newgame-tab">
                 <button
-                  className="newgame-button"
-                  onClick={(e) => {
-                    //setMenuOption("signup", mainContent, e);
-                    this.changeState("signup");
-                  }}>
-                  <span className="newgame">New Game</span>
+                  className="signup-button"
+                >
+                  <span>New Game</span>
                 </button>
               </div>
-              {/* Join Game Button */}
-              <div className="joingame-tab-highlight">
+              {/* Login Button */}
+              <div className="joingame-tab">
                 <button
-                  className="join-button"
-                  //onClick={(e) => setMenuOption("login", mainContent, e)}
+                  className="joingame-button"
                 >
-                  <span className="joingame">Join Game</span>
+                  <span>Join Game</span>
                 </button>
               </div>
             </div>
+          </div>
+     </div>
+     {/* */}
+     <div className="footer">
+     <footer>
+       <p> Contact</p>
+       <p> Terms of Service</p>
+       <p> Credit</p> 
+     </footer>
+     </div>
     </div>
     </div>
-    <div className="footer">
-      <div className="table">
-      <ul className="horizontal-list">
-      <li> Contact </li>
-      <li> Terms of Service</li>
-      <li> Credits </li>
-      </ul> 
-      </div>
-      </div>
-    </div>
-    </div>
+  </div>
         );
       }
     }
-
 export default HomePage;
