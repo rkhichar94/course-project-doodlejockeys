@@ -18,6 +18,7 @@ class App extends Component {
     return (
       <Router>
         <Route exact path="/" component={HomePage} />
+        {/* accessed thru the continue to play button in homepage component */}
         <Route path="/PlayPage" component={PlayPage} />
       </Router>
     );
