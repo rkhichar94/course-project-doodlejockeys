@@ -1,7 +1,22 @@
+:root {
+	/* --bg-color: #FFD600; */
+	--bg-color: rgba(255, 212, 67, 0.8);
+	--dk-maroon:  rgb(151, 0, 50);
+	--lt-maroon: rgb(200, 94, 129);
+}
+
 body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
+	background: var(--bg-color);
+}
+
+#root {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .App {
@@ -21,7 +36,6 @@ body {
     border: solid 3px;
     border-color: lightgray;
     border-radius: 5%;
-    margin-top: 50px;
     float: right;
   }
   
@@ -121,9 +135,9 @@ body {
   
   .chatHeader {
     background-color: rgb(41, 41, 41);
-    border-radius: 20px;
+    border-radius: 10px;
     height: 30px;
-    margin-top: -15px;
+    /* margin-top: -15px; */
     color: white;
     font-size: 20px;
     padding: 7px;
@@ -165,32 +179,74 @@ body {
     margin-left: 10px;
 }
 
-#canvas {
-    width: 50%;
-    margin-left: 0px;
-    float: left;
-}
 .toolbar {
-  width: 40%;
-  padding: 10px;
-  margin: 0 auto;
+  padding: 0.5rem;
   background-color:lightgray;
   font-size: 20px;
 }
 
+.container {
+	display: flex;
+}
+
+.left-col {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+#clock {
+	text-align: center;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+#clock p {
+	border-radius: 50%;
+	padding: 1rem;
+	background: var(--dk-maroon);
+}
+
 #scoreboard {
 	display: flex;
+	flex-direction: column;
 }
 
 .user-score {
 	display: flex;
-	flex-direction: column;
 	text-align: center;
-	margin: 0.5rem;
 	justify-content: center;
 	align-items: center;
+	color: #fff;
 }
+
+.user-score:nth-child(odd) > .user-info {
+	background: var(--dk-maroon);
+	padding: 0.5rem 1rem;
+	flex: 1;
+}
+
+.user-score:nth-child(even) > .user-info {
+	background: var(--lt-maroon);
+	padding: 0.5rem 1rem;
+	flex: 1;
+}
+
 .roundName {
     text-align: center;
     
+}
+
+.center-col {
+	display: flex;
+	flex-direction: column;
+	flex: 3;
+}
+
+.right-col {
+	display: flex;
+	flex: 2;
 }
