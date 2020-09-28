@@ -29,8 +29,10 @@ class Scoreboard extends Component {
 			tags.push(
 				<div className="user-score">
 					<img src={this.state.profilePictures[userList[user].profilePic]} alt="my profile pic" className="myProPic" />
-					<p className="user-name">{userList[user].username}</p>
-					<p className="score">{userList[user].preRoundScore}</p>
+					<div className="user-info">
+						<p className="user-name">{userList[user].username}</p>
+						<p className="score">{userList[user].preRoundScore}</p>
+					</div>
 				</div>
 			);
 		}

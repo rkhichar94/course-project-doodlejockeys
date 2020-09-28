@@ -19,17 +19,27 @@ function PlayPage() {
     };
     return (
         <React.Fragment>
-            <Canvas />
-            <Scoreboard userList={gameInfo.users} />
-            <Chat
-                gameid={gameInfo.currentGames[0].gameid}
-                userList={gameInfo.users}
-                round={gameInfo.currentGames[0].currentRound}
-                word={gameInfo.currentGames[0].currentWord}
-            />
-            <Toolbar />
-            <Clock />
 
+			<div className="container">
+				<div className="left-col">
+					<Scoreboard userList={gameInfo.users} />
+					<Clock />
+				</div>
+
+				<div className="center-col">
+					<Canvas />
+					<Toolbar />
+				</div>
+				
+				<div className="right-col">
+					<Chat
+						gameid={gameInfo.currentGames[0].gameid}
+						userList={gameInfo.users}
+						round={gameInfo.currentGames[0].currentRound}
+						word={gameInfo.currentGames[0].currentWord}
+					/>
+				</div>
+			</div>
         </React.Fragment>
     );
 }

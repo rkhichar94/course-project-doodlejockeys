@@ -18,7 +18,7 @@ class Canvas extends Component {
 		<div id="canvas">
 			<Sketch 
 				setup={(p5, parent) => {
-					p5.createCanvas(500, 500).parent(parent);
+					p5.createCanvas(700, 500).parent(parent);
 				}}
 				
 				draw = {(p5) => {
