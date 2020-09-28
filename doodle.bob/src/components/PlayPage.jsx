@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Clock from './Clock';
+import Scoreboard from './Scoreboard';
 import Chat from './Chat';
 import Canvas from './Canvas';
 import Toolbar from './Toolbar';
@@ -17,6 +18,7 @@ function PlayPage() {
     return (
         <React.Fragment>
             <Canvas />
+			<Scoreboard  userList={gameInfo.users}/>
             <Chat
                 gameid={gameInfo.gameid}
                 userList={gameInfo.users}

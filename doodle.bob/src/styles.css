@@ -158,3 +158,15 @@ body {
   font-size: 20px;
 }
 
+#scoreboard {
+	display: flex;
+}
+
+.user-score {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 0.5rem;
+	justify-content: center;
+	align-items: center;
+}
