@@ -2,15 +2,33 @@ import React, { Component } from 'react';
 import Sketch from 'react-p5';
 import "../styles.css";
 
-const UP = true;
-const DOWN = false;
+class Stroke {
+	constructor(_init) {
+		this.init = _init;
+		this.points = [];
+		this.stroke = 0;
+	}
+
+	add(p5, point) {
+		this.points.push(point);
+		p5.stroke(this.stroke);
+		p5.line(this.init.x, this.init.y, point.x, point.y);
+		this.init.x = point.x;
+		this.init.y = point.y;
+	}
+}
+
+const ALL_STROKES = [];
+
 
 class Canvas extends Component {
 
     constructor(props) {
 		super(props);
-		this.y = 0;
-		this.direction = UP;
+		this.state = {
+			lastStrokeIdx: -1,
+			erasing: false
+		}
     }
 
     render(props) {
@@ -22,16 +40,19 @@ class Canvas extends Component {
 				}}
 				
 				draw = {(p5) => {
-					p5.background(0);
-					p5.fill(255, this.y * 1.3, 0);
-					p5.ellipse(p5.width / 2, this.y, 50);
-					if (this.y > p5.height) this.direction = DOWN;
-					if (this.y < 0) {
-						this.direction = UP;
-					}
-					if (this.direction === UP) this.y += 8;
-					else this.y -= 4;
+					p5.background(255);
+					p5.noLoop();
+				}}
 
+				mousePressed = {p5 => {
+					this.setState({
+						lastStrokeIdx: this.state.lastStrokeIdx + 1
+					});
+					ALL_STROKES.push(new Stroke(p5.createVector(p5.mouseX, p5.mouseY)));
+				}}
+				
+				mouseDragged = {p5 => {
+					ALL_STROKES[this.state.lastStrokeIdx].add(p5, p5.createVector(p5.mouseX, p5.mouseY));
 				}}/>
 		</div>
 	);
