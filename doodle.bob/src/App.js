@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./App.css";
 import HomePage from "./components/Homepage";
 import PlayPage from "./components/PlayPage";
+import Avatar from "./components/Avatar";
 
 //Import all needed Component for this tutorial
 import {
@@ -19,6 +20,7 @@ class App extends Component {
       <Router>
         <Route exact path="/" component={HomePage} />
         {/* accessed thru the continue to play button in homepage component */}
+        <Route path="/Avatar" component={Avatar} />
         <Route path="/PlayPage" component={PlayPage} />
       </Router>
     );
