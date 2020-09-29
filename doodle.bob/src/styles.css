@@ -207,7 +207,9 @@ body {
 #clock p {
 	border-radius: 50%;
 	padding: 1rem;
+	width: 10%;
 	background: var(--dk-maroon);
+	border: 3px solid var(--lt-maroon);
 }
 
 #scoreboard {
