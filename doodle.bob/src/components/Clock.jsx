@@ -1,42 +1,47 @@
-import React, { Component } from 'react';
+import React from "react";
 
 
-class Clock extends Component {
+export default function App() {
+  const [counterSecond, setCounterSecond] = React.useState(0);
+  const [counter, setCounter] = React.useState(120);
+  const [time, setTime] = React.useState("");
+  const [status, setStatus] = React.useState("working");
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            seconds: 10
-        };
-    }
-    
-    componentDidMount() {
-        this.timerId = setInterval(
-            () => this.tick(), 1000
-        );
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timerId);
+  React.useEffect(() => {
+    let secondCounterId;
+    let counterId;
+    if (status === "working") {
+      secondCounterId = setTimeout(
+        () => setCounterSecond(counterSecond + 1),
+        1000
+      );
+      counterId = setTimeout(() => setCounter(counter - 1), 1000);
     }
 
-    tick() {
-        if(this.state.seconds <= 1) {
-            clearInterval(this.timerId);
-        }
+    return () => {
+      clearTimeout(counterId);
+      clearTimeout(secondCounterId);
+    };
+  }, [counterSecond, counter, status]);
 
-        this.setState({
-            seconds: this.state.seconds - 1
-        });
-    }
+  const handletimer = () => {
+    setTime(counterSecond);
+  };
+  const stopTimers = () => {
+    setStatus("paused");
+  };
+  const resume = () => {
+    setStatus("working");
+  };
 
-    render(props) {
-        return (
-        <div id="clock">
-            <p>{this.state.seconds + "s"}</p>
-        </div>
-    );
-    }
+  return (
+    <div className="App">
+      
+      <div>Countdown : {counter}</div>
+      <div> time: {time} </div>
+     
+      <button onClick={stopTimers}>Pause</button>
+      <button onClick={resume}>Resume</button>
+    </div>
+  );
 }
-
-export default Clock;
