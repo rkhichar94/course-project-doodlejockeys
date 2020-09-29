@@ -1,6 +1,6 @@
 :root {
 	/* --bg-color: #FFD600; */
-	--bg-color: rgba(255, 212, 67, 0.8);
+	--bg-color: rgb(255, 214, 2);
 	--dk-maroon:  rgb(151, 0, 50);
 	--lt-maroon: rgb(200, 94, 129);
 }
@@ -251,4 +251,98 @@ body {
 .right-col {
 	display: flex;
 	flex: 2;
+}
+
+.signupPage {
+  background-color: var(--dk-maroon);
+  width: 100%;
+  height: 100%;
+}
+
+
+.SignUp {
+  background-color: lightgrey;
+  /* opacity: 0.6; */
+  border: solid;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-width: 1px;
+  border-radius: 25px;
+  height: 520px;
+  width: 500px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.current {
+  margin-left: 15%;
+  float: left;
+  width: 50%;
+}
+
+.currentPic {
+  border-radius: 50%;
+  width: 80%;
+  float: left;
+  margin-top: -40px;
+  /* margin-bottom: 50px; */
+}
+
+.currentLabel {
+  margin-top: 165px;
+  margin-left: -45px;
+  float: center;
+}
+
+.optionPics {
+  float: right;
+  margin-right: 25%;
+
+  width: 10%;
+  height: 200px;
+  overflow: scroll;
+}
+
+.optionPic {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.signUpInputLineWidth input {
+  float: center;
+  width: 350px;
+}
+
+.signUp_avatar {
+  border-radius: 4px;
+  background-color: rgb(46, 46, 46);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: 0.4s;
+  cursor: pointer;
+  margin: 20px;
+  border: 3px solid white;
+  /* margin-top: 10%; */
+}
+
+.signUp_avatar:hover{
+  background-color: var(--bg-color);
+  color: black;
+  border: 3px solid black;
+}
+
+.signUpHeading {
+  font-family: 'Fredoka One', cursive;
+  color: rgba(0,0,0,0.65);
+  text-align: center;
+  letter-spacing: 3px;
+  text-decoration: none;
 }
