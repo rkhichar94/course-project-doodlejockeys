@@ -77,8 +77,10 @@ class HomePage extends Component {
                         rows="1"
                         cols="30"
                       ></textarea>
+                      <p className="enterUsername">Congratulations on starting the game!!! </p>
+                      <p className="enterUsername">Make sure to share the code with your friends!</p>
                       <div>
-                        <Link to="/PlayPage"><button className="continueToPlay">
+                        <Link to="/Avatar"><button className="continueToPlay">
                           Continue to Play
                         </button> </Link>
                       </div>
@@ -114,7 +116,7 @@ class HomePage extends Component {
                         cols="30"
                       ></textarea>
                       <div>
-                        <Link to="/PlayPage"><button className="continueToPlay">
+                        <Link to="/Avatar"><button className="continueToPlay">
                           Continue to Play
                         </button> </Link>
                       </div>
