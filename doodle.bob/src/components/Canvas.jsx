@@ -53,6 +53,10 @@ class Canvas extends Component {
 				
 				mouseDragged = {p5 => {
 					ALL_STROKES[this.state.lastStrokeIdx].add(p5, p5.createVector(p5.mouseX, p5.mouseY));
+				}}
+				
+				keyReleased = {p5 => {
+
 				}}/>
 		</div>
 	);
