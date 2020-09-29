@@ -57,7 +57,7 @@ class HomePage extends Component {
               {/* Sign Up Button */}
               <div className="newgame-tab">
                 <button
-                  className="signup-button"
+                  className="newgame-button"
                 >
                   <span>New Game</span>
                 </button>
