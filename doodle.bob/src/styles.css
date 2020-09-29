@@ -185,6 +185,11 @@ body {
   font-size: 20px;
 }
 
+.toolbar-button {
+  height: 35px;
+  width: 35px;
+}
+
 .container {
 	display: flex;
 }
