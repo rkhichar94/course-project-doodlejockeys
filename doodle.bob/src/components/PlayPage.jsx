@@ -5,6 +5,19 @@ import Chat from './Chat';
 import Canvas from './Canvas';
 import Toolbar from './Toolbar';
 
+
+class Back extends Component{
+	render() {
+		return (
+		<div>
+			<img src={require("../images/back.png")}
+                  alt="backbutton"
+                  class="backbutton" />
+			</div>
+		)
+}
+}
+
 function PlayPage() {
     const gameInfo = {
         currentGames: [
@@ -22,8 +35,10 @@ function PlayPage() {
             3: { userid: 3, username: "walrusparade", profilePic: "rhino", role: "guesser", preRoundScore: 0, thisRoundScore: 0 }
 >>>>>>> 69014b4... User story #8 correct guesses yield green message with word hidden, props.thisRoundScore updated only once
         },
-    };
-    return (
+	};
+
+ 	   return (
+		
         <React.Fragment>
 <<<<<<< HEAD
             <Canvas />
