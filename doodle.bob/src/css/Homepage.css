@@ -276,10 +276,32 @@ body {
   font-size: 20px;
   cursor: pointer;
   text-align: center;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 21px;
 }
 
 .continueToPlay:hover {
   background-color: white;
   color: darkgrey;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.horizontal-list{
+  list-style:none;
+  float:left;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+  padding: 30px;
 }
 /*END OF CSS FOR THE HOMEPAGE */
