@@ -30,10 +30,21 @@ class Scoreboard extends Component {
 				<div className="user-score">
 
 					<img src={this.state.profilePictures[userList[user].profilePic]} alt="my profile pic" className="myProPic" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+					<p className="user-name">{userList[user].username}</p>
+					<p className="score">{userList[user].score}</p>
+=======
+>>>>>>> 3c331692609c665afe60438c9ca72d3fb35341fc
 					<div className="user-info">
 						<p className="user-name">{userList[user].username}</p>
 						<p className="score">{userList[user].preRoundScore}</p>
 					</div>
+<<<<<<< HEAD
+=======
+>>>>>>> 2d6498c... Task #21: Add styles to make everything fall in place.
+>>>>>>> 3c331692609c665afe60438c9ca72d3fb35341fc
 				</div>
 			);
 		}
