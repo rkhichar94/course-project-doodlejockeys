@@ -4,19 +4,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencilAlt, faEraser, faFillDrip, faCircle, faTrashAlt, faUndoAlt, faPaintBrush } from "@fortawesome/free-solid-svg-icons";
 
 
-
-
 class Toolbar extends Component {
     constructor(props) {
         super(props);
         this.state = {isToggleOn: true,
                       diffBrush: true, 
-                      diffWidth: true};
+                      diffWidth: true,
+                      erase: false };
         this.handleClick = this.handleClick.bind(this);
         this.changeBrush = this.changeBrush.bind(this);
         this.changeWidth = this.changeWidth.bind(this);
+        this.handleErase = this.handleErase.bind(this);
       }
     
+      handleErase() {
+              this.setState(prevState => ({
+                erase: !prevState.erase,
+              }));
+              sessionStorage.setItem('eraser',this.state.erase)
+      }
+
       handleClick() {
         this.setState(prevState => ({
           isToggleOn: !prevState.isToggleOn,
@@ -45,7 +52,8 @@ class Toolbar extends Component {
                     <button className="toolbar-button"
                             onClick={this.changeBrush}> {this.state.diffBrush ? <FontAwesomeIcon icon={faPencilAlt}/> : <FontAwesomeIcon icon={faPaintBrush}/>   }
                     </button>
-                    <button className="toolbar-button">
+                    <button className="toolbar-button"
+                            onClick = {this.handleErase}>
                             <FontAwesomeIcon icon={faEraser}/>
                     </button>
                     <button className="toolbar-button">
