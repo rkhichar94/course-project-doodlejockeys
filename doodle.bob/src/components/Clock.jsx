@@ -15,6 +15,7 @@ export default function App() {
         () => setCounterSecond(counterSecond + 1),
         1000
       );
+
       counterId = setTimeout(() => setCounter(counter - 1), 1000);
     }
 
@@ -36,10 +37,10 @@ export default function App() {
 
   return (
     <div className="App">
-      
+
       <div>Countdown : {counter}</div>
       <div> time: {time} </div>
-     
+
       <button onClick={stopTimers}>Pause</button>
       <button onClick={resume}>Resume</button>
     </div>
