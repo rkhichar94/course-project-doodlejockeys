@@ -99,9 +99,6 @@ class Toolbar extends Component {
                             style ={{height:"35px", width: "35px"}}>
                             <FontAwesomeIcon icon={faTrashAlt}/>
                     </button>
-                    
-
-
             </div>
         );
       }
