@@ -5,6 +5,19 @@ import Chat from './Chat';
 import Canvas from './Canvas';
 import Toolbar from './Toolbar';
 
+
+class Back extends Component{
+	render() {
+		return (
+		<div>
+			<img src={require("../images/back.png")}
+                  alt="backbutton"
+                  class="backbutton" />
+			</div>
+		)
+}
+}
+
 function PlayPage() {
     const gameInfo = {
         currentGames: [
@@ -16,8 +29,10 @@ function PlayPage() {
             2: { userid: 2, username: "chickennuggets", profilePic: "chicken", role: "artist", preRoundScore: 0, thisRoundScore: 0 },
             3: { userid: 3, username: "walrusparade", profilePic: "rhino", role: "guesser", preRoundScore: 0, thisRoundScore: 0 }
         },
-    };
-    return (
+	};
+
+ 	   return (
+		
         <React.Fragment>
 
 			<div className="container">
