@@ -30,8 +30,6 @@ class Scoreboard extends Component {
 				<div className="user-score">
 
 					<img src={this.state.profilePictures[userList[user].profilePic]} alt="my profile pic" className="myProPic" />
-					<p className="user-name">{userList[user].username}</p>
-					<p className="score">{userList[user].score}</p>
 					<div className="user-info">
 						<p className="user-name">{userList[user].username}</p>
 						<p className="score">{userList[user].preRoundScore}</p>
