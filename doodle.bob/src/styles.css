@@ -183,6 +183,12 @@ body {
   padding: 0.5rem;
   background-color:lightgray;
   font-size: 20px;
+  text-align: center;
+}
+
+.toolbar-button {
+  height: 35px;
+  width: 35px;
 }
 
 .container {
