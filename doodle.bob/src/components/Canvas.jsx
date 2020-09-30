@@ -39,8 +39,6 @@ class Canvas extends Component {
 		var eraserbtn = p5.createButton("Erase All");
 		eraserbtn.mousePressed(this.resetSketch);
 		// eraserbtn.position();
-		
-
 	}
 
 	resetSketch = () => {
