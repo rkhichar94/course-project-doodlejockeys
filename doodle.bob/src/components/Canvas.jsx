@@ -19,7 +19,7 @@ class Stroke {
 	}
 }
 
-const ALL_STROKES = [];
+let ALL_STROKES = [];
 
 
 class Canvas extends Component {
@@ -29,6 +29,7 @@ class Canvas extends Component {
 		this.state = {
 			lastStrokeIdx: -1,
 			erasing: false,
+			drawing: false
 		}
 	}
 
@@ -55,18 +56,29 @@ class Canvas extends Component {
 	mousePressed = (p5) => {
 		if(this.state.erasing){
 			p5.background(255);
-			this.setState({erasing: false});
+			this.setState({erasing: false, lastStrokeIdx: -1});
+			ALL_STROKES = [];
 		}
 		else{
 			this.setState({
-				lastStrokeIdx: this.state.lastStrokeIdx + 1
+				lastStrokeIdx: this.state.lastStrokeIdx + 1,
+				drawing: true
 			});
 			ALL_STROKES.push(new Stroke(p5.createVector(p5.mouseX, p5.mouseY)));
 		}
 	}
 
 	mouseDragged =  (p5) => {
+
+		if(this.state.drawing) {
 			ALL_STROKES[this.state.lastStrokeIdx].add(p5, p5.createVector(p5.mouseX, p5.mouseY));
+		}
+	}
+
+	mouseReleased = (p5) => {
+		this.setState({
+			drawing: false
+		});
 	}
 
 	
@@ -78,8 +90,7 @@ class Canvas extends Component {
 				draw = {this.draw}
 				mousePressed = {this.mousePressed}
 				mouseDragged = {this.mouseDragged}
-				keyReleased = {p5 => {
-				}}
+				mouseReleased = {this.mouseReleased}
 				/>
 		</div>
 	);
